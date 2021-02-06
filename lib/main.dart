@@ -16,7 +16,31 @@ void main() {
           title: Text("Scafold App"),
         ),
         body: Container(
-          color: Colors.pinkAccent,
+          child : Row(
+            children: [
+              Container(
+                padding: EdgeInsets.all(10),
+                color: Colors.pinkAccent,
+                child: Text("Hey i am here" ,style: TextStyle(
+                  fontSize: 24
+                ),),
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                color: Colors.amber,
+                child: Text("Hey i am here" ,style: TextStyle(
+                  fontSize: 24
+                ),),
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                color: Colors.deepOrange,
+                child: Text("Hey i am here" ,style: TextStyle(
+                  fontSize: 24
+                ),),
+              ),
+            ],
+          )
         ),
       );
     }
