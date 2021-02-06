@@ -15,32 +15,43 @@ void main() {
         appBar: AppBar(
           title: Text("Scafold App"),
         ),
-        body: Container(
-          child : Row(
-            children: [
-              Container(
-                padding: EdgeInsets.all(10),
-                color: Colors.pinkAccent,
-                child: Text("Hey i am here" ,style: TextStyle(
-                  fontSize: 24
-                ),),
-              ),
-              Container(
-                padding: EdgeInsets.all(10),
-                color: Colors.amber,
-                child: Text("Hey i am here" ,style: TextStyle(
-                  fontSize: 24
-                ),),
-              ),
-              Container(
-                padding: EdgeInsets.all(10),
-                color: Colors.deepOrange,
-                child: Text("Hey i am here" ,style: TextStyle(
-                  fontSize: 24
-                ),),
-              ),
-            ],
-          )
+        body: Center(
+          child: Container(
+              padding: EdgeInsets.all(10),
+              child : Expanded(
+                child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      color: Colors.pinkAccent,
+                      child: Text("Hey i am here" ,style: TextStyle(
+                        fontSize: 24
+                      ),),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      color: Colors.amber,
+                      child: Text("Hey i am and this is wierd" ,style: TextStyle(
+                        fontSize: 24
+                      ),),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      color: Colors.deepOrange,
+                      child: Text("Hey i am here" ,style: TextStyle(
+                        fontSize: 24
+                      ),),
+                    ),
+                  ),
+                ],
+            ),
+              )
+          ),
         ),
       );
     }
