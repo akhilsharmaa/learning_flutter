@@ -4,45 +4,67 @@ import 'Contry.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: CardView(),
+    home: FirstActivity(),
   ));
 }
+            // Here is the Raised Button with onPress function
+              // Navigator.push( context,
+              //   MaterialPageRoute(builder: (context) => SecondRoute()),
 
-class CardView extends StatelessWidget {
+//
+// class SecondRoute extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Second Activity"),
+//       ),
+//       body: Container(
+//         child: Text("Second Activity",style: TextStyle(fontSize: 45),),
+//       ),
+//     );
+//   }
+// }
+
+
+class FirstActivity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("CardView"),
-        leading: Icon(Icons.watch_rounded),
+        title: Text("First Activity"),
       ),
       body: Center(
-        child: CardingView(),
+        child: Container(
+          child: ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => SecondRoute() ));
+          },
+            child: Text("Second Acivity"),
+          ),
+        ),
       ),
     );
   }
 }
 
 
-class CardingView extends StatelessWidget {
+
+
+class SecondRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Card(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const ListTile(
-              leading: Icon(Icons.access_alarms_outlined),
-              title: Text("The Enhanced Hero of coding"),
-              subtitle: Text("I actually don't know what to say."),
-            )
-            ,Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-            )
-          ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Second Route"),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            // Navigate back to first route when tapped.
+          },
+          child: Text('Go back!'),
         ),
-      )
+      ),
     );
   }
 }
